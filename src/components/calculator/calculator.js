@@ -32,7 +32,7 @@ export function createCalculator() {
   });
   const seven = createElement("input", {
     type: "button",
-    value: 7,
+    value: "7",
     id: "seven",
     onclick: function () {
       document.forms.display.value += 7;
@@ -40,7 +40,7 @@ export function createCalculator() {
   });
   const eight = createElement("input", {
     type: "button",
-    value: 8,
+    value: "8",
     id: "eight",
     onclick: function () {
       document.forms.display.value += 8;
@@ -48,7 +48,7 @@ export function createCalculator() {
   });
   const nine = createElement("input", {
     type: "button",
-    value: 9,
+    value: "9",
     id: "nine",
     onclick: function () {
       document.forms.display.value += 9;
@@ -64,7 +64,7 @@ export function createCalculator() {
   });
   const four = createElement("input", {
     type: "button",
-    value: 4,
+    value: "4",
     id: "four",
     onclick: function () {
       document.forms.display.value += 4;
@@ -72,7 +72,7 @@ export function createCalculator() {
   });
   const five = createElement("input", {
     type: "button",
-    value: 5,
+    value: "5",
     id: "five",
     onclick: function () {
       document.forms.display.value += 5;
@@ -80,7 +80,7 @@ export function createCalculator() {
   });
   const six = createElement("input", {
     type: "button",
-    value: 6,
+    value: "6",
     id: "six",
     onclick: function () {
       document.forms.display.value += 6;
@@ -96,7 +96,7 @@ export function createCalculator() {
   });
   const one = createElement("input", {
     type: "button",
-    value: 1,
+    value: "1",
     id: "one",
     onclick: function () {
       document.forms.display.value += 1;
@@ -104,7 +104,7 @@ export function createCalculator() {
   });
   const two = createElement("input", {
     type: "button",
-    value: 2,
+    value: "2",
     id: "two",
     onclick: function () {
       document.forms.display.value += 2;
@@ -112,7 +112,7 @@ export function createCalculator() {
   });
   const three = createElement("input", {
     type: "button",
-    value: 3,
+    value: "3",
     id: "three",
     onclick: function () {
       document.forms.display.value += 3;
