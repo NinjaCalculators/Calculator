@@ -36,3 +36,16 @@ input::-webkit-inner-spin-button {
 #display::placeholder {
   opacity: 50%;
 }
+@media (max-width: 500px) {
+  .button {
+    width: 100%;
+  }
+  .calculator-form {
+    padding: 20px;
+  }
+}
+@media (min-width: 501px) {
+  .button {
+    width: 100%;
+  }
+}
