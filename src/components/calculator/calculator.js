@@ -25,7 +25,7 @@ import { createElement } from "../utils/createelement";
 
 export function createCalculator() {
   const display = createElement("input", {
-    type: "number",
+    type: "text",
     name: "display",
     id: "display",
     placeholder: "🔫",
@@ -147,7 +147,7 @@ export function createCalculator() {
     value: "←",
     id: "clearback",
     onclick: function () {
-      document.forms.display.value += "";
+      document.forms.display.value = "";
     },
   });
   const add = createElement("input", {
@@ -162,13 +162,20 @@ export function createCalculator() {
     type: "button",
     value: "=",
     id: "equal",
+    onclick: function () {
+      if (display.value == "") {
+        alert("Please enter a number");
+      } else {
+        document.forms.display.value = eval(document.forms.display.value);
+      }
+    },
   });
   const clear = createElement("input", {
     type: "button",
     value: "C",
     id: "clear",
     onclick: function () {
-      document.forms.display.value += "-";
+      document.forms.display.value = "";
     },
   });
 
