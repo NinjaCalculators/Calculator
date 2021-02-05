@@ -32,83 +32,131 @@ export function createCalculator() {
   });
   const seven = createElement("input", {
     type: "button",
-    value: "7",
+    value: 7,
     id: "seven",
+    onclick: function () {
+      document.forms.display.value += 7;
+    },
   });
   const eight = createElement("input", {
     type: "button",
-    value: "8",
+    value: 8,
     id: "eight",
+    onclick: function () {
+      document.forms.display.value += 8;
+    },
   });
   const nine = createElement("input", {
     type: "button",
-    value: "9",
+    value: 9,
     id: "nine",
+    onclick: function () {
+      document.forms.display.value += 9;
+    },
   });
   const devide = createElement("input", {
     type: "button",
     value: "/",
     id: "devide",
+    onclick: function () {
+      document.forms.display.value += "/";
+    },
   });
   const four = createElement("input", {
     type: "button",
-    value: "4",
+    value: 4,
     id: "four",
+    onclick: function () {
+      document.forms.display.value += 4;
+    },
   });
   const five = createElement("input", {
     type: "button",
-    value: "5",
+    value: 5,
     id: "five",
+    onclick: function () {
+      document.forms.display.value += 5;
+    },
   });
   const six = createElement("input", {
     type: "button",
-    value: "6",
+    value: 6,
     id: "six",
+    onclick: function () {
+      document.forms.display.value += 6;
+    },
   });
   const multi = createElement("input", {
     type: "button",
     value: "x",
     id: "multi",
+    onclick: function () {
+      document.forms.display.value += "*";
+    },
   });
   const one = createElement("input", {
     type: "button",
-    value: "1",
+    value: 1,
     id: "one",
+    onclick: function () {
+      document.forms.display.value += 1;
+    },
   });
   const two = createElement("input", {
     type: "button",
-    value: "2",
+    value: 2,
     id: "two",
+    onclick: function () {
+      document.forms.display.value += 2;
+    },
   });
   const three = createElement("input", {
     type: "button",
-    value: "3",
+    value: 3,
     id: "three",
+    onclick: function () {
+      document.forms.display.value += 3;
+    },
   });
   const subs = createElement("input", {
     type: "button",
     value: "-",
     id: "subs",
+    onclick: function () {
+      document.forms.display.value += "-";
+    },
   });
   const dot = createElement("input", {
     type: "button",
     value: ".",
     id: "dot",
+    onclick: function () {
+      document.forms.display.value += ".";
+    },
   });
   const zero = createElement("input", {
     type: "button",
     value: "0",
     id: "zero",
+    onclick: function () {
+      document.forms.display.value += 0;
+    },
   });
   const clearback = createElement("input", {
     type: "button",
     value: "←",
     id: "clearback",
+    onclick: function () {
+      document.forms.display.value += "";
+    },
   });
   const add = createElement("input", {
     type: "button",
     value: "+",
     id: "add",
+    onclick: function () {
+      document.forms.display.value += "+";
+    },
   });
   const equal = createElement("input", {
     type: "button",
@@ -119,9 +167,13 @@ export function createCalculator() {
     type: "button",
     value: "C",
     id: "clear",
+    onclick: function () {
+      document.forms.display.value += "-";
+    },
   });
 
   return createElement("form", {
+    name: "forms",
     className: "calculator-form",
     children: [
       display,
