@@ -147,7 +147,10 @@ export function createCalculator() {
     value: "←",
     id: "clearback",
     onclick: function () {
-      document.forms.display.value = "";
+      document.forms.display.value = document.forms.display.value.substring(
+        0,
+        document.forms.display.value.length - 1
+      );
     },
   });
   const add = createElement("input", {
