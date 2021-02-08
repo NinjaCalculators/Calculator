@@ -26,7 +26,6 @@ import { createElement } from "../utils/createelement";
 export function createCalculator() {
   const display = createElement("input", {
     type: "text",
-    name: "display",
     id: "display",
     placeholder: "Ninja Calculator",
   });
@@ -36,7 +35,7 @@ export function createCalculator() {
       type: "button",
       value: number,
       onclick: function () {
-        document.form.display.value += number;
+        display.value += number;
       },
     });
 
@@ -45,7 +44,7 @@ export function createCalculator() {
       type: "button",
       value: calculate,
       onclick: function () {
-        document.form.display.value += calculate;
+        display.value += calculate;
       },
     });
 
@@ -53,17 +52,14 @@ export function createCalculator() {
     type: "button",
     value: ".",
     onclick: function () {
-      document.form.display.value += ".";
+      display.value += ".";
     },
   });
   const clearback = createElement("input", {
     type: "button",
     value: "←",
     onclick: function () {
-      document.form.display.value = document.form.display.value.substring(
-        0,
-        document.form.display.value.length - 1
-      );
+      display.value = display.value.substring(0, display.value.length - 1);
     },
   });
   const equal = createElement("input", {
@@ -74,7 +70,7 @@ export function createCalculator() {
       if (display.value == "") {
         alert("Please enter a number");
       } else {
-        document.form.display.value = eval(document.form.display.value);
+        display.value = eval(display.value);
       }
     },
   });
@@ -82,12 +78,11 @@ export function createCalculator() {
     type: "button",
     value: "C",
     onclick: function () {
-      document.form.display.value = "";
+      display.value = "";
     },
   });
 
-  return createElement("form", {
-    name: "form",
+  return createElement("div", {
     className: "calculator-form",
     children: [
       display,
