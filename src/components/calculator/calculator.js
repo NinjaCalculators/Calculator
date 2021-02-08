@@ -36,7 +36,7 @@ export function createCalculator() {
       type: "button",
       value: number,
       onclick: function () {
-        document.forms.display.value += number;
+        document.form.display.value += number;
       },
     });
 
@@ -45,26 +45,24 @@ export function createCalculator() {
       type: "button",
       value: calculate,
       onclick: function () {
-        document.forms.display.value += calculate;
+        document.form.display.value += calculate;
       },
     });
 
   const dot = createElement("input", {
     type: "button",
     value: ".",
-    id: "dot",
     onclick: function () {
-      document.forms.display.value += ".";
+      document.form.display.value += ".";
     },
   });
   const clearback = createElement("input", {
     type: "button",
     value: "←",
-    id: "clearback",
     onclick: function () {
-      document.forms.display.value = document.forms.display.value.substring(
+      document.form.display.value = document.form.display.value.substring(
         0,
-        document.forms.display.value.length - 1
+        document.form.display.value.length - 1
       );
     },
   });
@@ -76,21 +74,20 @@ export function createCalculator() {
       if (display.value == "") {
         alert("Please enter a number");
       } else {
-        document.forms.display.value = eval(document.forms.display.value);
+        document.form.display.value = eval(document.form.display.value);
       }
     },
   });
   const clear = createElement("input", {
     type: "button",
     value: "C",
-    id: "clear",
     onclick: function () {
-      document.forms.display.value = "";
+      document.form.display.value = "";
     },
   });
 
   return createElement("form", {
-    name: "forms",
+    name: "form",
     className: "calculator-form",
     children: [
       display,

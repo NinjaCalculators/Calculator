@@ -1,5 +1,5 @@
-export function createElement(tagname, props) {
-  const element = document.createElement(tagname);
+export function createElement(tagName, props) {
+  const element = document.createElement(tagName);
   const { children, ...other } = props;
   Object.assign(element, other);
 
